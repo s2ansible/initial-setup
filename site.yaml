@@ -1,0 +1,41 @@
+---
+- hosts: all
+  roles:
+    - cloud3rsio.yumrepo_common
+    - cloud3rsio.yumrepo_epel
+    - cloud3rsio.yumrepo_remi
+    - s2ansible.yumrepo_zabbix
+    - cloud3rsio.common_packages
+    - cloud3rsio.update_all_packages
+    - role: cloud3rsio.hostname
+      hostname: example.com
+    - cloud3rsio.iptables/disable
+    - cloud3rsio.journald
+    - cloud3rsio.kernel_params
+    - cloud3rsio.logrotate_rules
+    - role: cloud3rsio.os_user
+      name: admin-xxxx
+      password: Passw0rd
+      homedir: /home/admin-xxxx
+      generate_ssh_key: yes
+      additional_ssh_keys: []
+    - cloud3rsio.selinux/disabled
+    - cloud3rsio.swapfile
+    - cloud3rsio.time
+    - role: s2ansible.zabbix_agent
+      zabbix_agent_UserParameters:
+        - postfix.queuen,mailq | grep "^[0-9A-F]" | wc -l
+        - redis.status[*],redis-cli info | grep -w "$1" | awk -F':' '{print $$2}'
+        - redis.ping,redis-cli ping 2>/dev/null | grep -w 'PONG' | wc -l
+      zabbix_agent_mysql:
+        user: root
+        password: Passw0rd
+        host: 127.0.0.1
+    - role:s2ansible.sshd
+      sshd_port: 22
+      sshd_user: user1 user2
+    - s2ansible.postfix
+    - role: s2ansible.rootpasswd
+      root_password: Passw0rd
+    - role: s2ansible.deluser
+      delete_user: deluser
