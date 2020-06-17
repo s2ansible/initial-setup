@@ -5,12 +5,12 @@
 - cloud3rsio.update_all_packages
 - cloud3rsio.common_packages
 - cloud3rsio.hostname
-- cloud3rsio.iptables/disable
+- cloud3rsio.iptables
 - cloud3rsio.journald
 - cloud3rsio.kernel_params
 - cloud3rsio.logrotate_rules
 - cloud3rsio.os_user
-- cloud3rsio.selinux/disable
+- cloud3rsio.selinux
 - cloud3rsio.swapfile
 - cloud3rsio.time
 - s2ansible.sshd
