@@ -20,7 +20,8 @@
       generate_ssh_key: yes
       additional_ssh_keys: []
     - cloud3rsio.selinux/disabled
-    - cloud3rsio.swapfile
+    - role: cloud3rsio.swapfile
+      swapfile_size: 1024
     - cloud3rsio.time
     - role: s2ansible.zabbix_agent
       zabbix_agent_UserParameters:
