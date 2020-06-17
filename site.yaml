@@ -31,7 +31,7 @@
         user: root
         password: Passw0rd
         host: 127.0.0.1
-    - role:s2ansible.sshd
+    - role: s2ansible.sshd
       sshd_port: 22
       sshd_user: user1 user2
     - s2ansible.postfix
