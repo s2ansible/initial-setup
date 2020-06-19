@@ -19,3 +19,4 @@
 - s2ansible.deluser
 - s2ansible.yumrepo_zabbix
 - s2ansible.zabbix_agent
+- s2ansible.zabbix_host
