@@ -32,6 +32,14 @@
         user: root
         password: Passw0rd
         host: 127.0.0.1
+    - role: s2ansible.zabbix_host
+      zabbix_server_url: https://example.com
+      zabbix_login_user: zabbix_login_user
+      zabbix_login_password: password
+      zabbix_host_name: hostname
+      zabbix_host_groups: hostgroup
+      zabbix_templates: templates
+      public_ip: xxx.xxx.xxx.xxx
     - role: s2ansible.sshd
       sshd_port: 22
       sshd_user: user1 user2
