@@ -1,6 +1,5 @@
 ---
 - hosts: all
-- ec2_metadata_facts:
   roles:
     - cloud3rsio.yumrepo_common
     - cloud3rsio.yumrepo_epel
