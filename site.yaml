@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  tasks:
+  pre_tasks:
     - name: gather ec2_metadata
       ec2_metadata_facts:
   roles:
