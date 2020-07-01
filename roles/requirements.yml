@@ -16,6 +16,7 @@
 - s2ansible.sshd
 - s2ansible.postfix
 - s2ansible.rootpasswd
+- s2ansible.adminpasswd
 - s2ansible.deluser
 - s2ansible.yumrepo_zabbix
 - s2ansible.zabbix_agent

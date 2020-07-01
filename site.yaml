@@ -49,5 +49,7 @@
     - s2ansible.postfix
     - role: s2ansible.rootpasswd
       root_password: Passw0rd
+    - role: s2ansible.adminpasswd
+      admin_password: Passw0rd
     - role: s2ansible.deluser
       delete_user: deluser
