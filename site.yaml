@@ -32,9 +32,9 @@
         - redis.status[*],redis-cli info | grep -w "$1" | awk -F':' '{print $$2}'
         - redis.ping,redis-cli ping 2>/dev/null | grep -w 'PONG' | wc -l
       zabbix_agent_mysql:
-        user: root
-        password: Passw0rd
-        host: 127.0.0.1
+        zabbix_mysql_user: root
+        zabbix_mysql_password: Passw0rd
+        zabbix_mysql_host: 127.0.0.1
     - role: s2ansible.zabbix_host
       zabbix_server_url: https://example.com
       zabbix_login_user: zabbix_login_user
