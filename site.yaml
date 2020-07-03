@@ -51,5 +51,6 @@
       root_password: Passw0rd
     - role: s2ansible.adminpasswd
       admin_password: Passw0rd
+      admin_ssh_passphrase: Passphrase
     - role: s2ansible.deluser
       delete_user: deluser
