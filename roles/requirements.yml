@@ -9,10 +9,10 @@
 - cloud3rsio.journald
 - cloud3rsio.kernel_params
 - cloud3rsio.logrotate_rules
-- cloud3rsio.os_user
 - cloud3rsio.selinux
 - cloud3rsio.swapfile
 - cloud3rsio.time
+- s2ansible.admin_user
 - s2ansible.sshd
 - s2ansible.postfix
 - s2ansible.rootpasswd
