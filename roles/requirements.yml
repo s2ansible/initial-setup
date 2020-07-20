@@ -1,7 +1,7 @@
 #
 - cloud3rsio.yumrepo_common
 - cloud3rsio.yumrepo_epel
-- cloud3rsio.yumrepo_remi
+- s2ansible.yumrepo_remi
 - cloud3rsio.update_all_packages
 - cloud3rsio.common_packages
 - cloud3rsio.hostname
