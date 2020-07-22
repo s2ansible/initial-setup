@@ -23,10 +23,20 @@
       generate_ssh_key: yes
       ssh_key_passphrase: Passphrase
       additional_ssh_keys: []
-    - cloud3rsio.selinux/disabled
+    - s2ansible.selinux/disabled
     - role: cloud3rsio.swapfile
       swapfile_size: 1024
     - cloud3rsio.time
+    - role: s2ansible.sshd
+      sshd_port: 22
+      sshd_user: user1 user2
+    - s2ansible.postfix
+    - role: s2ansible.rootpasswd
+      root_password: Passw0rd
+    - role: s2ansible.adminpasswd
+      admin_password: Passw0rd
+    - role: s2ansible.deluser
+      delete_user: deluser
     - role: s2ansible.zabbix_agent
       zabbix_agent_UserParameters:
         - postfix.queuen,mailq | grep "^[0-9A-F]" | wc -l
@@ -44,13 +54,3 @@
       zabbix_host_groups: hostgroup
       zabbix_templates: templates
       public_ip: xxx.xxx.xxx.xxx
-    - role: s2ansible.sshd
-      sshd_port: 22
-      sshd_user: user1 user2
-    - s2ansible.postfix
-    - role: s2ansible.rootpasswd
-      root_password: Passw0rd
-    - role: s2ansible.adminpasswd
-      admin_password: Passw0rd
-    - role: s2ansible.deluser
-      delete_user: deluser
