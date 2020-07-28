@@ -19,5 +19,6 @@
 - s2ansible.adminpasswd
 - s2ansible.deluser
 - s2ansible.yumrepo_zabbix
+- s2ansible.yumrepo_zabbix30
 - s2ansible.zabbix_agent
 - s2ansible.zabbix_host
