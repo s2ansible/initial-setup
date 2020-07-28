@@ -12,4 +12,4 @@ $ ansible-playbook site.yaml
 
 ---
 
-- Support OS platforms are AmazonLinux2 and CentOS7
+- Support OS platforms are AmazonLinux2 and CentOS7 and CentOS8
