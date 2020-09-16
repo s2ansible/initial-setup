@@ -4,7 +4,7 @@
     - name: gather ec2_metadata
       ec2_metadata_facts:
   roles:
-    - cloud3rsio.yumrepo_common
+    - s2ansible.yumrepo_common
     - s2ansible.yumrepo_epel
     - s2ansible.yumrepo_remi
     - role: s2ansible.yumrepo_zabbix

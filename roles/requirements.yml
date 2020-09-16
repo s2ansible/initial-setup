@@ -1,5 +1,5 @@
 #
-- cloud3rsio.yumrepo_common
+- s2ansible.yumrepo_common
 - s2ansible.yumrepo_epel
 - s2ansible.yumrepo_remi
 - cloud3rsio.update_all_packages
